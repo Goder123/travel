@@ -1,0 +1,588 @@
+/* magra-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Magra';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/magra-v14-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+/* aleo-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Aleo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/aleo-v14-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* aleo-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Aleo';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/aleo-v14-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* aleo-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Aleo';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/aleo-v14-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* aleo-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Aleo';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/aleo-v14-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* red-hat-text-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Red Hat Text';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/red-hat-text-v18-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  border: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body.no-scrole {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.wrapper {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  background: rgba(242, 120, 92, 0.7);
+  box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+  
+}
+
+.header_logo-text{
+  color: white;
+  font-family: 'Magra', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  margin: 0 0 0 6px;
+}
+
+.header_logo-link {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header_list {
+  display: flex;
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 0;
+  margin-right: 42px;
+  
+}
+
+.header_link {
+  color:#FFFFFF;
+  font-size:16px;
+  line-height: 21px;
+  text-decoration: none;
+  padding: 50px 21px;
+  cursor: pointer;
+  position: relative;
+}
+
+.header_link::after {
+  position:absolute;
+  content: '';
+  left:50%;
+  bottom: 40%;
+  display: block;
+  width: 0;
+  transition: 0.3s;
+  height: 1px;
+  background: #FFFFFF;
+  transform: translateX(-50%);
+}
+
+.header_link:hover {
+  
+  
+}
+
+.header_link:hover:after {
+  width: 100%;
+}
+
+
+
+.header_item {
+  list-style: none;
+}
+
+.header_item:last-child {
+  margin-right: 0;
+}
+
+.header_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+
+}
+
+.button_header {
+  padding: 10px 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+  color:#FFFFFF;
+  border-radius: 10px;
+  font-size:16px;
+  
+}
+
+.button {
+  background: #0d606f;
+  font-family: 'Red Hat Text';
+  cursor: pointer;
+  
+}
+
+button:hover 
+{ background-color: #16acc7;
+  transition: 0.5s;
+ }
+
+
+.wrapper_background {
+  min-height: 765px;
+  background-image: url("../img/background_sectionOne.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin-bottom: 80px;
+ 
+}
+
+/*         SECTION 1                */
+
+.preview_info {
+  width: 892px;
+  padding-top: 32px;
+}
+.preview_title {
+  font-family: "Aleo", sans-serif;
+  font-size: 80px;
+  color:#FFFFFF;
+  font-weight: 700;
+  line-height: 96px;
+  margin-bottom: 32px;
+}
+
+.preview_subtitle {
+  font-family: 'Aleo', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 20px;
+  color:#FFFFFF;
+  margin-bottom: 46px;
+  line-height: 24px;
+}
+
+.preview_form{
+  display:flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  padding: 18px 18px 18px 41px;
+  height: 95px;
+  
+
+}
+
+.preview_input {
+  width: 100%;
+  font-family: 'Aleo';
+  font-style: italic;
+  font-size: 24px;
+  
+  
+}
+
+.preview_button {
+  border-radius: 10px;
+  color:#FFFFFF;
+  white-space: nowrap;
+  font-size: 24px;
+  font-family: 'Red Hat Text';
+  font-weight: 500;
+  padding: 14px 32px;
+}
+
+input {
+  all: unset;
+}
+
+.preview_input::placeholder {
+  color:#f2785c;
+  font-family: "Aleo", sans-serif ;
+  line-height: 29px;
+  letter-spacing: -0.9px;
+}
+
+h1,h2,h3 {
+  margin: 0;
+}
+
+
+
+/*         SECTION 2                */
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 97px;
+}
+
+.steps_wrapper {
+  
+}
+
+.steps_information {
+  display:flex;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.steps_title {
+  font-family: 'Red Hat Text';
+  font-size: 40px;
+  line-height: 53px;
+  font-weight: 500;
+  padding-bottom: 40px;
+  color:#f2785c
+}
+
+.steps_text {
+  font-family: 'Aleo',sans-serif;;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(13, 96, 111, 1);
+}
+
+.steps_item_icon {
+  margin-bottom: 30px;
+}
+
+.steps_item {
+  text-align: center;
+}
+
+.steps_item_margin {
+  margin-left: 70px;
+}
+
+
+/*         SECTION 3               */
+
+
+
+
+
+.destinations {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.destinations_title {
+  text-align: center;
+  font-family: 'Red Hat Text';
+  font-size: 40px;
+  line-height: 53px;
+  font-weight: 500;
+  color:#f2785c;
+  margin-bottom: 46px;
+}
+
+
+
+.destinations_item_text {
+  position: absolute;
+  bottom: 40px;
+  left: 15px;
+  font-family: 'Red Hat Text';
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 42px;
+  color:#FFFFFF;
+}
+
+.destinations_slider {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.destinations_slider_img {
+  border-radius: 16px;
+}
+
+.destinations_slider-wrapper {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  
+}
+
+.destinations_scroll {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+
+}
+
+.destinations_scroll-switch {
+  width: 20px;
+  height: 20px;
+  background: #F2785C80;
+  opacity: 50%;
+  border-radius: 50%;
+  margin-right: 10px;
+  
+
+}
+
+.active {
+  background: #F2785C;
+
+}
+
+.button-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Red Hat Text';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFF;
+  width: max-content;
+  margin: 0 auto;
+  padding: 14px 33px;
+  border-radius: 10px;
+
+}
+
+.button_img {
+  margin-right:10px;
+  
+}
+
+/*         SECTION 4               */
+
+.stories-background {
+  background-image: url(/img/background_sectionFour.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.stories_background-opacity {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.stories-title {
+  text-align: center;
+  font-family: 'Red Hat Text';
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 53px;
+  color: #f2785c;
+  padding-bottom: 40px;
+
+}
+.stories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stories-page {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.stories_content {
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+.stories-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.stories_item-title {
+  font-family: 'Aleo';
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 42px;
+  color:#0D606F;
+  margin-bottom: 24px;
+
+}
+
+.stories_item-text {
+  display: -webkit-box;
+  font-family: "Aleo", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0d606f;
+ -webkit-line-clamp: 6;  
+ -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.stories-img {
+  margin-right: 40px;
+  
+}
+
+.stories_item-img {
+  display: block;
+  max-width: 400px;
+  height: 250px;
+  filter: drop-shadow(0 4px 4px #0d606f);
+  border-radius: 16px;
+
+
+}
+
+.stories_item-link {
+  color:#0D606F;
+  font-family: "Aleo", sans-serif;;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: underline;
+
+}
+
+.stories_item-link:hover {
+  color:#16acc7;
+  transition: 0.5s;
+}
+
+/*         FOOTER             */
+
+.footer_wrapper {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  
+ 
+}
+
+.footer_text {
+  font-family:"Red Hat Text",sans-serif ;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color:#FFFFFF;
+}
+
+.footer_item-link {
+  height: 31px;
+}
+
+.footer_social-list {
+  display: flex;
+  align-items: center;
+}
+
+.footer_item {
+  margin-right: 20px;
+}
+
+.footer_item:last-child {
+  margin-right: 0px;
+}
+
+.author-link {
+  height: 31px;
+}
+
+.footer_item:hover {
+  transform: scale(1.3);
+  
+}
+  
